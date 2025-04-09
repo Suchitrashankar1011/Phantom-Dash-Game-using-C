@@ -1,26 +1,36 @@
-# Raylib C++ Starter Template
+# Phantom Dash Game
 
-Raylib C++ Starter Template for Visual Studio Code on Windows.
+A simple 2D platformer game built using **C++** and **Raylib**.  
+Inspired by Mario, but with a twist — you can't attack enemies, only dodge them!
 
-This demo project contains a bouncing ball raylib example program.
+---
 
-It works with raylib version 4.5.
-Tested on both Windows 10 and Windows 11.
+## 🕹️ Game Features
+- Dodge enemies and collect points
+- Reach the finish line to complete the level
+- Two fully playable levels implemented
+- Simple animations, collision detection, and scoring
+- Retro arcade-like gameplay
 
-# Video Tutorial
+---
 
-<p align="center">
-  <img src="preview.jpg" alt="" width="800">
-</p>
+## 📁 Project Structure
+- `main.cpp`: Main game loop and setup
+- `Levels.cpp`: Handles level design and transitions
+- `Menu.cpp`: Displays the main menu
+- `Player.cpp`: Controls the player movement and logic
+- `Enemies.cpp`: Manages enemy behavior
+- `Animations.cpp`: Simple sprite animations
 
-<p align="center">
-🎥 <a href="https://www.youtube.com/watch?v=PaAcVk5jUd8">Video Tutorial on YouTube</a>
-</p>
+---
 
-<br>
-<br>
-<p align="center">
-| 📺 <a href="https://www.youtube.com/channel/UC3ivOTE5EgpmF2DHLBmWIWg">My YouTube Channel</a>
-| 🌍 <a href="https://www.programmingwithnick.com">My Website</a> | <br>
-</p>
+## 🛠️ How to Build
 
+Make sure you have **Raylib** installed and properly configured with g++.
+
+Compile the project using:
+
+```bash
+g++ -o main.exe main.cpp Levels.cpp Menu.cpp Player.cpp Enemies.cpp Animations.cpp -lraylib -lopengl32 -lgdi32 -lwinmm
+
+.\main.exe
