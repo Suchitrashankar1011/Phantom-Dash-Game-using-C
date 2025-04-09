@@ -1,0 +1,24 @@
+name: C++ Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install Dependencies
+      run: |
+        choco install raylib
+    - name: Build with g++
+      run: |
+        g++ -o main.exe main.cpp Levels.cpp Menu.cpp Player.cpp Enemies.cpp Animations.cpp -lraylib -lopengl32 -lgdi32 -lwinmm
+
+
+---
+
